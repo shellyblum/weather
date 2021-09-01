@@ -1,0 +1,20 @@
+
+
+<div class="current-location">
+  <h3>Current Location Weather:</h3>
+  <h4>{{currentLocationForcast?.name}}</h4>
+  <p>Humidity: {{currentLocationForcast?.main.humidity + '%'}}</p>
+  <p>{{currentLocationForcast?.main.temp + '&#8451;'}}</p>
+  <p>Feels like: {{currentLocationForcast?.main.feels_like + '&#8451;'}}</p>
+  <p>Max: {{currentLocationForcast?.main.temp_max + '&#8451;'}}</p>
+  <p>Min: {{currentLocationForcast?.main.temp_min + '&#8451;'}}</p>
+  <p>{{currentLocationForcast?.weather[0].description}}</p>
+  <!--<p>{{currentLocationForcast?.weather[0].icon}}</p>-->
+</div>
+
+<div class="add-loaction">
+  <mat-form-field>
+    <input matInput formControlName="addCityControl" type="text" placeholder="Type city name..">
+  </mat-form-field>
+  <button (click)="addCity()">Add</button>
+</div>
